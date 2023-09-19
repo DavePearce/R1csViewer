@@ -75,3 +75,18 @@ Prime: 2188824287183927522224640574525727508854836440041603434369820418657580849
 (-1 + 1.w3) * (1.w3) - () = 0
 (-1.w2) * (1.w3) - (-1.w1) = 0
 ```
+
+To understand this output, its helpful to multiply out the constraints
+and simplify them a little.  Doing this gives us:
+
+```
+(w2 * w2) - w2 == 0
+(w3 * w3) - w3 == 0
+w1 - (w2 * w3) == 0
+```
+
+To understand these constraints, its helpful to know that `w2`
+corresponds with `a`, `w3` corresponds with `b` and `w1` with `out`.
+Then, the first two constraints correspond to `a * (a-1) === 0;` and
+`b * (b-1) === 0;` from our circom file, whilst the last constraint
+corresponds with `out <== a * b;`.
