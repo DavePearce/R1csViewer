@@ -82,7 +82,7 @@ and simplify them a little.  Doing this gives us:
 ```
 (w2 * w2) - w2 == 0
 (w3 * w3) - w3 == 0
-w1 - (w2 * w3) == 0
+ w1 - (w2 * w3) == 0
 ```
 
 To understand these constraints, its helpful to know that `w2`
